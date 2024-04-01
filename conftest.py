@@ -69,31 +69,7 @@ def get_class_logger(request):
     # Set the log level
     logger.setLevel(logging.DEBUG)
     # Create a file handler
-    handler = logging.FileHandler('../Log/test.log','w')
-    # Create a logging format
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    # Add the handlers to the logger
-    logger.addHandler(handler)
-    # Return the logger
-    return logger
-
-
-"""
-Session level scope fixture
-"""
-
-
-@pytest.fixture(scope='session')
-def get_session_logger(request):
-    # Get the test case name without the directory path
-    test_case_name = request.node.nodeid.split('/')[-1]
-    # Create a new logger with the test case name as the logger name
-    logger = logging.getLogger(test_case_name)
-    # Set the log level
-    logger.setLevel(logging.DEBUG)
-    # Create a file handler
-    handler = logging.FileHandler('../Log/test.log','w')
+    handler = logging.FileHandler('../Log/test.log')
     # Create a logging format
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
