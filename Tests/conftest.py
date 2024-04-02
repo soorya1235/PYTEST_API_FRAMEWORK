@@ -1,4 +1,4 @@
-# conftest.py
+# dont_user_conftest.py
 
 import pytest
 import sys
@@ -71,7 +71,8 @@ def get_class_logger(request):
     # Create a file handler
     handler = logging.FileHandler('../Log/test.log','w')
     # Create a logging format
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    #formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
     handler.setFormatter(formatter)
     # Add the handlers to the logger
     logger.addHandler(handler)

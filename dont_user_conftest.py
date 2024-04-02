@@ -1,4 +1,4 @@
-# conftest.py
+# dont_user_conftest.py
 
 import pytest
 import sys
