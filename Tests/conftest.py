@@ -69,9 +69,9 @@ def get_class_logger(request):
     # Set the log level
     logger.setLevel(logging.DEBUG)
     # Create a file handler
-    handler = logging.FileHandler('../Log/test.log','w')
+    handler = logging.FileHandler('../Log/test.log', 'w')
     # Create a logging format
-    #formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(name)s - %(message)s')
     handler.setFormatter(formatter)
     # Add the handlers to the logger
@@ -87,6 +87,8 @@ Session level scope fixture
 
 @pytest.fixture(scope='session')
 def get_session_logger(request):
+    # Clean up Existing Reports folder
+    clean_up()
     # Get the test case name without the directory path
     test_case_name = request.node.nodeid.split('/')[-1]
     # Create a new logger with the test case name as the logger name
@@ -94,14 +96,32 @@ def get_session_logger(request):
     # Set the log level
     logger.setLevel(logging.DEBUG)
     # Create a file handler
-    handler = logging.FileHandler('../Log/test.log','w')
+    handler = logging.FileHandler('../Log/test.log', 'w')
     # Create a logging format
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     handler.setFormatter(formatter)
     # Add the handlers to the logger
     logger.addHandler(handler)
     # Return the logger
-    return logger
+    yield logger
+
+
+def clean_up():
+    parent_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(parent_dir)  # Go up one level to the parent directory
+    # Set the path to the Reports folder
+    reports_folder = os.path.join(parent_dir, "Reports")
+    if os.path.exists(reports_folder):
+        # Iterate over files in the Reports folder and remove them
+        for filename in os.listdir(reports_folder):
+            file_path = os.path.join(reports_folder, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print(f"Failed to delete {file_path}. Reason: {e}")
 
 
 @pytest.fixture(scope='session', autouse=True)
