@@ -12,7 +12,7 @@ logging.basicConfig(filename='../Log/test.log', level=logging.INFO,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 
-class TestApplication:
+class TestAppplication:
 
     @classmethod
     def setup_class(cls):

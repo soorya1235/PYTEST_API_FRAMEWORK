@@ -3,7 +3,7 @@ Example of tearn_down class where it will be called after all the test is execut
 """
 
 
-class TestApplication:
+class TestAppplication:
     @classmethod
     def setup_class(cls):
         print("Setting up class")

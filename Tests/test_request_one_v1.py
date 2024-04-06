@@ -9,7 +9,7 @@ from Resources.application_service import Applications
 from Utilities.configurations import get_aut_configurations
 
 
-class TestApplication:
+class TestAppplication:
 
     @classmethod
     def setup_class(cls):

@@ -13,7 +13,7 @@ from Utilities.configurations import get_aut_configurations
 
 
 @pytest.mark.usefixtures("timeout_use_class")
-class TestApplication:
+class TestAppplication:
 
     def test_get_request_1(self):
         url = Applications.test_api.format(get_aut_configurations()['API']['ip'])
