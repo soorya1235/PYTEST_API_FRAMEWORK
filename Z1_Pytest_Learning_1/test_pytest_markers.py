@@ -1,7 +1,7 @@
 # smoke_test.py
 import pytest
 
-pytestmark = [pytest.mark.smoke, pytest.mark.fe]
+#pytestmark = [pytest.mark.smoke, pytest.mark.fe]
 
 
 class TestUserSmoke(object):

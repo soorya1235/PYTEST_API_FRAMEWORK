@@ -106,6 +106,44 @@ def get_session_logger(request):
     yield logger
 
 
+@pytest.fixture(scope='session')
+def get_session_logger_v1(request):
+    # Clean up Existing Reports folder
+    clean_up()
+    # Get the test case name without the directory path
+    test_case_name = request.node.nodeid.split('/')[-1]
+    # Create a new logger with the test case name as the logger name
+    logger = logging.getLogger(test_case_name)
+    # Set the log level
+    logger.setLevel(logging.DEBUG)
+
+    # Get the path to the parent directory of the 'Tests' folder
+    parent_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(parent_dir)  # Go up one level to the parent directory
+
+    # Set the path to the Log folder
+    log_folder = os.path.join(parent_dir, "Log")
+
+    # Ensure the Log folder exists, if not create it
+    os.makedirs(log_folder, exist_ok=True)
+
+    # Specify the path to the log file
+    log_file = os.path.join(log_folder, "test.log")
+
+    # Create a FileHandler with the specified log file
+    handler = logging.FileHandler(log_file, 'w')
+
+    # Create a file handler
+    #handler = logging.FileHandler(handler, 'w')
+    # Create a logging format
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    # Add the handlers to the logger
+    logger.addHandler(handler)
+    # Return the logger
+    yield logger
+
+
 def clean_up():
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(parent_dir)  # Go up one level to the parent directory

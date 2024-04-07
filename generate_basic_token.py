@@ -1,9 +1,9 @@
 import base64
 
 username = "example1"
-#username = "philipjfry"
+# username = "philipjfry"
 password = "example1"
-#password = "10.77,"
+# password = "10.77,"
 
 # Concatenate username and password with a colon
 credentials = f"{username}:{password}"

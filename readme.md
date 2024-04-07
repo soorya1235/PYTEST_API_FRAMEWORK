@@ -16,3 +16,12 @@ install all the dependcies.
 collect the requirement.txt
 push the file to the remote repo.
 Add the folder structure and push
+
+Step4:
+How to configur the allure reports.
+First install "pip install allure-pytest"
+https://pypi.org/project/allure-pytest/
+Second
+pytest --alluredir=%allure_result_folder% ./tests
+allure serve %allure_result_folder%
+set allure_result_folder="C:\PROJECTS_GITHUB\API_Framework_Development_Draft_Demo1\Reports"
