@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "58a6bf5a-dcc1-4574-b316-fb236e979514",
+		"name": "Helix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6429445",
+		"_collection_link": "https://orange-resonance-901884.postman.co/workspace/soorya~7f8fa8be-0988-4cc2-8f4f-f9403a7a9df9/collection/6429445-58a6bf5a-dcc1-4574-b316-fb236e979514?action=share&source=collection_link&creator=6429445"
+	},
+	"item": [
+		{
+			"name": "Get your program settings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "List Bank Documents",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Download Bank Statement",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXhhbXBsZTE6ZXhhbXBsZTE=1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-api.helix.q2.com/bankDocument/list",
+					"protocol": "https",
+					"host": [
+						"sandbox-api",
+						"helix",
+						"q2",
+						"com"
+					],
+					"path": [
+						"bankDocument",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List industry classification codes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "List account holds",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer due diligence questions",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Customer_Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXhhbXBsZTE6ZXhhbXBsZTE=1",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isSubjectToBackupWithholding\": True,\r\n    \"isOptedInToBankCommunication\": True,\r\n    \"isDocumentsAccepted\": True,\r\n    \"usePreferredNameOnCard\": False\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-api.helix.q2.com/customer/create",
+					"protocol": "https",
+					"host": [
+						"sandbox-api",
+						"helix",
+						"q2",
+						"com"
+					],
+					"path": [
+						"customer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer_Create Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXhhbXBsZTE6ZXhhbXBsZTE=1",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isSubjectToBackupWithholding\": True,\r\n    \"isOptedInToBankCommunication\": True,\r\n    \"isDocumentsAccepted\": True,\r\n    \"usePreferredNameOnCard\": False\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox-api.helix.q2.com/customer/create",
+					"protocol": "https",
+					"host": [
+						"sandbox-api",
+						"helix",
+						"q2",
+						"com"
+					],
+					"path": [
+						"customer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Customers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-api.corepro.io/bankdocument/download/en-US/13550052",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandbox-api.corepro.io/bankdocument/download/en-US/13550052",
+					"protocol": "https",
+					"host": [
+						"sandbox-api",
+						"corepro",
+						"io"
+					],
+					"path": [
+						"bankdocument",
+						"download",
+						"en-US",
+						"13550052"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
