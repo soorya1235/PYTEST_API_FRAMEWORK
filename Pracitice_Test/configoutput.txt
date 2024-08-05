@@ -1,0 +1,39 @@
+Windows IP Configuration
+
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 12:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter VMware Network Adapter VMnet1:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::ecfe:bd94:789d:5564%18
+   IPv4 Address. . . . . . . . . . . : 192.168.137.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VMware Network Adapter VMnet8:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::d5a8:f081:8023:cb82%15
+   IPv4 Address. . . . . . . . . . . : 192.168.164.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2405:201:d03d:4808:6808:34aa:c6c7:205
+   Temporary IPv6 Address. . . . . . : 2405:201:d03d:4808:145:5ff3:f190:25ae
+   Link-local IPv6 Address . . . . . : fe80::6398:6cd0:2976:d80f%14
+   IPv4 Address. . . . . . . . . . . : 192.168.29.10
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::f2ed:b8ff:fecc:db1b%14
+                                       192.168.29.1

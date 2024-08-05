@@ -18,3 +18,4 @@ def learning_class_scope_fixture():
     print("--In class Scope Enter---")
     yield
     print("--Out of class Scope---")
+    
